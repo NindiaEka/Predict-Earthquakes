@@ -1,0 +1,48 @@
+1. Jelaskan latar belakang adanya bagging dan cara kerja bagging !
+
+Berbagai model seperti decision tree cenderung menunjukkan variasi yang tinggi: mereka sangat responsif terhadap perubahan kecil dalam dataset pelatihan, yang mengakibatkan prediksi yang tidak konsisten. Bagging berperan dalam mengurangi variasi ini dengan menggabungkan sejumlah model yang berbeda secara terpisah. [DataCamp](https://www.datacamp.com/tutorial/what-bagging-in-machine-learning-a-guide-with-examples?utm_source=chatgpt.com#:~:text=Bagging%20(bootstrap%20aggregating)%20is%20an%20ensemble%20method%20that%20involves%20training%20multiple%20models%20independently%20on%20random%20subsets%20of%20the%20data%2C%20and%20aggregating%20their%20predictions%20through%20voting%20or%20averaging.)
+
+Dengan menggabungkan banyak model dari dataset yang berbeda (melalui pengambilan sampel dengan pengembalian), kita menciptakan stabilitas yang lebih besar. Rata-rata hasil dari model-model ini umumnya lebih tepat dan lebih kebal terhadap overfitting.
+
+Cara Kerja Bagging
+1. Pengambilan Sampel Bootstrap:
+   Dalam Pengambilan Sampel Bootstrap, data diambil sampelnya dengan 'n' subset yang dibuat secara acak dari dataset pelatihan asli dengan penggantian. Langkah ini memastikan bahwa model dasar dilatih pada subset data yang beragam karena beberapa sampel mungkin muncul beberapa kali dalam subset baru sementara yang lain mungkin tidak muncul. Hal ini mengurangi risiko overfitting dan meningkatkan akurasi model.
+
+2. Pelatihan Model Dasar:
+   Dalam bagging, beberapa model dasar digunakan. Setelah Bootstrap Sampling, setiap model dasar dilatih secara independen menggunakan algoritma pembelajaran seperti pohon keputusan, mesin vektor pendukung, atau jaringan saraf tiruan pada subset data bootstrap yang berbeda. Model-model ini biasanya disebut "Weak Learner" karena akurasinya rendah. Karena model dasar dilatih secara independen dan paralel, hal ini menjadikannya efisien secara komputasi dan menghemat waktu.
+
+3. Agregasi:
+   Setelah semua model dasar dilatih dan membuat prediksi berdasarkan data baru yang belum terlihat, pengklasifikasi bagging memprediksi label kelas untuk instance yang diberikan berdasarkan suara terbanyak dari semua pembelajar basis. Kelas yang memiliki suara terbanyak akan menjadi prediksi model.
+
+4. Evaluasi Out-of-Bag (OOB):
+   Beberapa sampel dikecualikan dari subset pelatihan model dasar tertentu selama metode bootstrapping. Sampel "out-of-bag" ini dapat digunakan untuk memperkirakan kinerja model tanpa perlu validasi silang. [geeksforgeeks-Bagging-classifier](https://www.geeksforgeeks.org/machine-learning/What-is-Bagging-classifier/?utm_)
+
+---
+
+2. Jelaskan perbedaan cara kerja algoritma Random Forest dengan algoritma boosting yang Anda pilih !
+
+Boosting Gradien menekankan pada perbaikan kesalahan secara bertahap, sementara random forest bergantung pada keragaman pohon-pohon yang dilatih secara mandiri. Kedua metode ini memiliki kelebihan dan kekurangan masing-masing, dan pilihan di antara keduanya tergantung pada sifat khusus dari dataset serta tujuan dari tugas pembelajaran mesin.
+
+| **Fitur**                      | **Gradient Boosting Trees**                                                                                   | **Random Forests**                                                                                   |
+|--------------------------------|----------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| **Pembangunan Model**          | Bertahap (*sequential*), setiap pohon dibangun satu per satu.                                                  | Paralel, setiap pohon dibangun secara independen.                                                    |
+| **Bias & Variance**            | Bias lebih rendah, tetapi varians lebih tinggi sehingga lebih rentan terhadap *overfitting*.                   | Varians lebih rendah, sehingga kurang rentan terhadap *overfitting*.                                 |
+| **Feature Importance**         | Membutuhkan teknik tambahan untuk menilai *feature importance*.                                               | Memberikan *feature importance* langsung berdasarkan pengurangan impurity, interpretasinya lebih sederhana. |
+| **Parameter yang Disetel**     | Lebih banyak parameter yang harus diatur (misalnya *learning rate*, jumlah pohon, dll.).                       | Lebih sedikit parameter yang perlu diatur (jumlah pohon, jumlah fitur per split).                    |
+| **Kedalaman Pohon**            | Menggunakan pohon dangkal (*weak learners*).                                                                   | Menggunakan pohon dalam (*strong learners*).                                                         |
+| **Waktu Pelatihan**            | Lebih lambat karena sifatnya yang bertahap (*sequential*).                                                     | Lebih cepat karena dapat dilatih secara paralel.                                                      |
+| **Ketahanan terhadap Outlier** | Lebih sensitif terhadap *outlier* dan *noise*.                                                                 | Kurang sensitif terhadap *outlier* dan *noise*.                                                       |
+| **Ukuran Dataset**             | Efektif untuk dataset kecil hingga menengah.                                                                   | Efektif untuk dataset besar dan dapat diskalakan dengan baik.                                         |
+| **Koreksi Error**               | Lebih rentan terhadap *cascading errors*, di mana kesalahan dari satu pohon memengaruhi pohon berikutnya.      | Kurang rentan terhadap *cascading errors* karena pohon bekerja independen.                            |
+
+
+
+Random Forests: Kurang rentan terhadap cascading errors karena pohon bekerja independen.Sumber : [geeksforgeeks-gradient-boosting-vs-random-forest](https://www.geeksforgeeks.org/machine-learning/gradient-boosting-vs-random-forest/)
+
+---
+
+3. Jelaskan apa yang dimaksud dengan Cross Validation !
+
+Cross validation adalah metode yang digunakan untuk menilai seberapa baik model machine learning bekerja pada data yang belum pernah dilihat sebelumnya. Teknik ini membagi data menjadi beberapa bagian, melatih model pada beberapa bagian tersebut dan menguji model pada bagian yang tersisa, mengulangi proses ini berkali-kali. Akhirnya, hasil dari setiap langkah validasi dirata-ratakan untuk menghasilkan perkiraan yang lebih tepat mengenai kinerja model.
+
+Tujuan utama dari cross validation adalah untuk menghindari overfitting. Jika ingin memastikan bahwa model machine learning tidak hanya menghafal data pelatihan tetapi juga mampu beradaptasi dengan data dunia nyata, Cross validation adalah teknik yang sering diterapkan. [geeksforgeeks-Cross Validation](https://www.geeksforgeeks.org/machine-learning/cross-validation-machine-learning/#:~:text=Cross%2Dvalidation%20is,commonly%20used%20technique.)

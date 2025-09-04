@@ -1,0 +1,3 @@
+Dataset : https://earthquake.usgs.gov/earthquakes/search/
+File Deployment : https://drive.google.com/drive/folders/1pEkzNwObkPcV60bZSLOtgvIZs2rDhfeC?usp=sharing
+Hasil Deployment : https://predict-earthquakes.streamlit.app/
