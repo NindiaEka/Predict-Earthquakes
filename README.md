@@ -28,6 +28,6 @@ o	Communicate effectively with stakeholders and affected communities
 3.	Support long-term planning by analyzing historical damage patterns, contributing to better urban planning, infrastructure development, and resilience-building in high-risk zones.
 
 ## Sumber: 
--	USGS Earthquake Hazards Program
--	BNPB : 7 Gempa Terbesar Di Indonesia Dalam 100 Tahun Terakhir
--	Enhance infrastructure resilience
+-	[USGS Earthquake Hazards Program](https://www.usgs.gov/programs/earthquake-hazards)
+-	[BNPB : 7 Gempa Terbesar Di Indonesia Dalam 100 Tahun Terakhir](https://sejarah.dibi.bnpb.go.id/poster/7-Gempa-Terbesar-Di-Indonesia-Dalam-100-Tahun-Terakhir---Juara-2/6)
+-	[Enhance infrastructure resilience](https://www.undrr.org/resilient-infrastructure/enhance-infrastructure-resilience)
