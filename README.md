@@ -1,17 +1,4 @@
-# Analisis & Prediksi Gempa Bumi Indonesia 2020–2025
-
-
-## Repository Outline
-```
-1. README.md - Penjelasan gambaran umum project
-2. P1M2_Nindia-Ekasuci.ipynb - Notebook yang berisi pengolahan data dengan python
-3. P1M2_Nindia-Ekasuci_inf.ipynb - Notebook yang berisi uji coba data menggunakan data baru (inference)
-4. description.md - Berisi deskripsi singkat mengenai apa yang telah dilakukan
-5. model_best_tunning.pkl - berisi file best model yang telah di tunning
-6. P1M2_Nindia-Ekasuci_Conceptual_Problem.txt - berisi mengenai penjelasan mengenai dasar - dasar metode atau algoritma yang akan dilakukan
-7. Dataset_gempa.csv - Dataset yang akan dilakukan pengolahan lebih lanjut
-8. URL.txt - informasi URL dari data set dan deployment
-```
+# Earthquake Damage Severity Prediction System
 
 ## Problem Background
 Menurut laporan [Badan Geologi](https://www.cnbcindonesia.com/news/20250122174037-4-605239/gempa-bumi-merusak-hantam-ri-cetak-rekor-di-2024-fakta-aneh-terungkap), kejadian gempa bumi yang telah mengakibatkan terjadinya korban jiwa, kerusakan bangunan, kerusakan lingkungan dan kerugian harta benda. Kejadian gempa bumi merusak tahun 2024 merupakan yang tertinggi dalam kurun waktu 24 tahun terakhir sejak tahun 2000. Memprediksi magnitudo gempa bumi menggunakan parameter lokasi, kedalaman, jumlah stasiun seismik, dan indikator akurasi menggunakan data gempa pada tahun 2020- 2025. Tujuannya adalah mendukung BNPB dalam memperkirakan kekuatan gempa lebih cepat sehingga dapat mengoptimalkan penyaluran sumber daya dan evakuasi.
@@ -56,3 +43,4 @@ Stacks yang Digunakan
 [Hasil-Deployment](https://predict-earthquakes.streamlit.app/)
 
 ---
+
