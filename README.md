@@ -38,9 +38,13 @@ Stacks yang Digunakan
 
 ## Reference
 [Badan Geologi](https://www.cnbcindonesia.com/news/20250122174037-4-605239/gempa-bumi-merusak-hantam-ri-cetak-rekor-di-2024-fakta-aneh-terungkap)
+
 [USGS-The U.S. Geological Survey]( https://earthquake.usgs.gov/earthquakes/search/)
+
 [File-Deployment](https://drive.google.com/drive/folders/1pEkzNwObkPcV60bZSLOtgvIZs2rDhfeC?usp=sharing)
+
 [Hasil-Deployment](https://predict-earthquakes.streamlit.app/)
 
 ---
+
 
